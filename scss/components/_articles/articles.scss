@@ -1,0 +1,25 @@
+.articles {
+    background-color: $background-articles;
+    display: flex;
+}
+.articles-wrapper {
+    display: flex;
+    width: 100%;
+    .article-item {
+        @extend %articles-style;
+        width: calc( 100% / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        @include transform(scale(0.9));
+        width: 300px;
+    }
+    a {
+        @include transform(skew(10deg));
+        text-decoration: none;
+        color: red;
+    }
+}
